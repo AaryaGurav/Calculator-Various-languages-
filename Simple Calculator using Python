@@ -1,0 +1,45 @@
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Error: Division by zero is not allowed."
+
+def main():
+    while True:
+        print("Pick an option:")
+        print("1. ADD")
+        print("2. SUBTRACT")
+        print("3. MULTIPLY")
+        print("4. DIVIDE")
+        print("5. QUIT")
+        choice = int(input("Your Choice: "))
+        
+        if choice == 5:
+            break
+        
+        a = int(input("Enter the first number: "))
+        b = int(input("Enter the second number: "))
+        
+        if choice == 1:
+            print(f"The Addition is: {add(a, b)}")
+        elif choice == 2:
+            print(f"The Subtraction is: {subtract(a, b)}")
+        elif choice == 3:
+            print(f"The Multiplication is: {multiply(a, b)}")
+        elif choice == 4:
+            result = divide(a, b)
+            print(f"The Division is: {result}")
+        else:
+            print("Invalid choice.")
+
+if __name__ == "__main__":
+    main()
